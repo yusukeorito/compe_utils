@@ -1,8 +1,8 @@
 # コンペ用のコード
-├── Utils  
+│── Utils  
 │   ├── Log.py  
 │   └── make_folder.py  
-├── feature  
+│── feature  
 │   ├── base_feature_block.py  
 │   └── create_feature.py  
 └── pytoch  
