@@ -23,5 +23,6 @@ def run_blocks(input_df, blocks, y=None, test=False):
             name = block.__class__.__name__
             output_df = pd.concat([output_df, out_i.add_suffix(f'@{name}')], axis=1)
     return output_df
-    
+
+
 
