@@ -1,8 +1,8 @@
 # コンペ用のコード 
 ### Utils:実験管理やディレクトリ生成などの汎用的なコード。notebook用。
-make_folder.py:実験管理用のフォルダ作成
-logger.py:モデルや特徴量の読み込みと記録
-time.py:Timer
+make_folder.py:実験管理用のフォルダ作成<br>
+logger.py:モデルや特徴量の読み込みと記録<br>
+time.py:Timer<br>
 
 
 ### feature
