@@ -1,5 +1,11 @@
 {
     "python.pythonPath": "/opt/anaconda3/bin/python",
+    "python.autoComplete.extraPaths": [
+        "/Users/oritoyusuke/miniforge3/envs/python38/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/Users/oritoyusuke/miniforge3/envs/python38/lib/python3.8/site-packages"
+    ],
     
 
 }

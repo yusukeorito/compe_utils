@@ -7,6 +7,7 @@ import numpy as np
 import xgboost as xgb
 from xgboost import XGBModel
 
+
 #XGBoostのラッパーモデル
 class XGBModel:
     def __init__(self, model_params=None, fit_params=None):
