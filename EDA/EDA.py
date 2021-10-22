@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib_venn import venn2
 
 #特徴量のヒストグラムを作成する関数
 def plot_hist(X, title=None, x_label=None):
@@ -27,10 +28,24 @@ def plot_scatters(X, y, title=None):
     columns = X.columns
     fig, axes = plt.subplots(nrows=None, ncols=None)
     for ax, c in zip(axes.ravel(), columns):
-        sns.scatterplot(X[c], y, ci=None, ax=ax)
+        sns.scatterplot(X[c], y, ci=None, ax=ax, label=None) #ここを変更することで応用できる sns.histplot()など
         
         ax.set_xlabel(c)
         ax.set_ylabel('target')
+        ax.legend()
 
     fig.suptitle(title)
     fig.show()
+
+#train dataとtest dataの差分を確かめる関数
+
+fig, axes = plt.subplots(figsize=(n_rows*3, n_cols*3), nrows=None, ncols=None)
+for ax, c in zip(axes.ravel(), columns):
+    venn2(
+        subsets=(set(train[c].unique()), set(test[c].unique())),
+        set_labels=('Train', 'Test'),
+        ax=ax
+    )
+
+    ax.set_title(c)
+fig.tight_layout()
