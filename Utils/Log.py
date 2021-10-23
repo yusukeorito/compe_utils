@@ -4,7 +4,9 @@ import joblib
 import logging
 import datetime
 from joblib.logger import Logger
+from Utils.make_folder import REPORTS
 
+#モデルや予測結果の読み書き
 class Util:
     @classmethod
     def dump(cls, value, path):
@@ -14,6 +16,7 @@ class Util:
     @classmethod
     def load(cls, path):
         return joblib.load(path)
+
 
 class Logger:
     def __init__(self, path):

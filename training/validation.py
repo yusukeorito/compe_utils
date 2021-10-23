@@ -1,10 +1,19 @@
 import os
+import sys
 import pandas as pd
 import numpy as np
 from logging import Logger
+from Utils.make_folder import REPORTS, PREDS, TRAINED
 from scipy.sparse.construct import random
 from sklearn import model_selection
 from sklearn.model_selection import KFold, StratifiedKFold
+
+sys.path.append('.')
+from Utils.Log import Util, Logger
+
+logger = Logger(REPORTS)
+
+
 
 #KFold
 def kf(train_x, train_y, n_splits, random_state=2021, key=None):
