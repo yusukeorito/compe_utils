@@ -1,6 +1,31 @@
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib_venn import venn2
+
+x = np.array([0,1,2,3,4])
+y = np.array([5,6,7,8,9])
+
+#可視化テンプレート（１つ）
+fig, ax = plt.subplots(figsize=(6,4))
+sns.histplot(x, y, ax=ax) #必要なグラフに変更
+ax.set_xlabel('')
+ax.set_ylabel('')
+fig.suptitle('')
+fig.show()
+
+
+#可視化テンプレート（複数描画）
+fig, axes = plt.subplots(nrows=1, ncols=1, figsize=())
+for i, ax in enumerate(axes):
+    sns.scatterplot(x[:, i], y) #必要なグラフに変更
+    ax.set_xlabel("")
+    ax.set_ylabel("")
+    ax.set_title("")
+fig.suptitle("")
+fig.show()
+
+
 
 #特徴量のヒストグラムを作成する関数
 def plot_hist(X, title=None, x_label=None):
