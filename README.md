@@ -10,5 +10,9 @@ basic_feature.py:数値特徴量,count_encoding, onehot_encoding, target_encodin
 statistic_feature.py:各種統計量をとる特徴量<br>
 create_feature.py:指定blockの特徴量の作成
 
-### model:モデルのラッパー。 train_cv内で利用できる形状。
+### model
+* lightGBM
+* TabNet
+* Catboost(調整中)
+* Transformer(調整中)
 
