@@ -18,7 +18,7 @@ fig.show()
 #可視化テンプレート（複数描画）
 fig, axes = plt.subplots(nrows=1, ncols=1, figsize=())
 for i, ax in enumerate(axes):
-    sns.scatterplot(x[:, i], y) #必要なグラフに変更
+    sns.scatterplot(x[:, i], y, ax=ax) #必要なグラフに変更
     ax.set_xlabel("")
     ax.set_ylabel("")
     ax.set_title("")

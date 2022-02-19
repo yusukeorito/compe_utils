@@ -35,7 +35,7 @@ def fit_lgb(
 
     oof_pred = np.zeros((n_records, n_labels), dtype=np.float)
 
-    for i, (tr_idx, va_idx) in enumerate(cv):
+    for i, (tr_idx, va_idx) in enumerate(cv.split(X, y)):
         tr_X, tr_y = X[tr_idx], y[tr_idx]
         va_X, va_y = X[va_idx], y[va_idx]
 
@@ -201,4 +201,5 @@ def visualize_confusion_matrix(
 
     return ax, conf
 
-_ = visualize_confusion_matrix(y, np.argmax(oof, axis=1), conf_options={ "normalize": None }, plot_options={ "fmt": "4d" })
+#_ = visualize_confusion_matrix(y, np.argmax(oof, axis=1), conf_options={ "normalize": None }, plot_options={ "fmt": "4d" })
+
